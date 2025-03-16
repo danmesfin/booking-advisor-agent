@@ -1,0 +1,50 @@
+{
+  "title": "Travel Search Agent",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchQuery": {
+      "title": "Travel Search Query",
+      "type": "string",
+      "description": "Describe your travel requirements in natural language (e.g., 'Looking for a 2-bedroom accommodation in Barcelona with ratings above 4.0 and price between $100 and $300 per night').",
+      "editor": "textarea"
+    },
+    "currency": {
+      "title": "Currency",
+      "type": "string",
+      "description": "Currency for price display",
+      "editor": "select",
+      "enum": ["USD", "EUR", "GBP"],
+      "default": "USD"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "description": "Language for search results",
+      "enum": ["en-gb", "es", "fr", "de"],
+      "default": "en-gb"
+    },
+    "maxResults": {
+      "title": "Maximum Results",
+      "type": "integer",
+      "description": "Maximum number of results to return",
+      "minimum": 1,
+      "maximum": 50,
+      "default": 10
+    },
+    "modelName": {
+      "title": "OpenAI model",
+      "type": "string",
+      "description": "The OpenAI model to use for processing natural language queries",
+      "enum": ["gpt-4o", "gpt-4o-mini"],
+      "default": "gpt-4o-mini"
+    },
+    "debug": {
+      "title": "Debug",
+      "type": "boolean",
+      "description": "If enabled, the Actor will run in debug mode and produce more output.",
+      "default": false
+    }
+  },
+  "required": ["searchQuery"]
+}
