@@ -1,3 +1,3 @@
 ## Trip Advisor Agent
 
-this agent is designed to scrape bookings from booking.com from a user query.
+This agent helps you find suitable travel options by filtering and presenting information about accommodations based on your-defined criteria.
